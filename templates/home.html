@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel = "stylesheet" href = "/css\style.css">
+    <link rel = "stylesheet" href = "/css/events.css">
+    <link rel = "stylesheet" href = "/css/footer.css">
+</head>
+<body>
+    <ul>
+      <li><a href = "">Home</a></li>
+        <li><a href = "#about-us">About Us</a></li>
+        <li><a href = "/templates/events.html">Events</a></li>
+    </ul>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="/images/slideshow3.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="/images/slideshow2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/images/slideshow1.jpg" style="width:100%">
+          </div>
+
+        <div class="mySlides fade">
+            <img src="/images/slideshow4.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+      <div class = "text">
+        <section id="about-us">
+
+            <div style="display: inline-block;">
+              <img src = "/images/grid - 1.jpg" width="35%">
+              <p style="float: right">
+                Welcome to Explore IT event website! We are a passionate community dedicated to making a difference.<br>
+                As an NGO committed to cater to the society, we organize impactful events that bring people together for <br>
+                positive change. From fundraisers to awareness campaigns, each event embodies our shared values of <br>
+                compassion, empowerment, and solidarity. Our team works tirelessly alongside volunteers, sponsors, and <br>
+                supporters to create meaningful experiences that inspire action and uplift communities. <br>
+                Join us in our mission to create a better world,one event <br>
+                at a time. Together, we can make a profound difference.<br>
+              </p>
+            </div>
+<br>
+
+            <img src="/images/grid - 2.jpg" width="500" height="170"
+            style="float: right;">
+      <p>
+        We are the heart and soul of Explore IT, a dedicated team of individuals committed to driving meaningful change. 
+          At our core, we are advocates, activists, and allies, united by a shared vision of a brighter, more equitable future for all. Through our relentless efforts, we are working tirelessly to create sustainable solutions and empower communities. With the support of volunteers, donors, and partners, we amplify our impact, sparking tangible progress and fostering hope. Together, we are a force for good, driven by compassion, 
+          integrity, and a steadfast belief in the power of collective action. 
+          Join us in our journey to make a lasting difference.
+
+      </section>
+      </div>
+      <br>
+      
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/templates/home.html">Home</a></li>
+          <li><a href="/templates/home.html#about-us">Abouts Us</a></li>
+          <li><a href="/templates/events.html">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Website Team</h3>
+        <ul>
+          <li>Garv Bhargava</li>
+          <li>Puja Baldawa</li>
+          <li>Mustafa Khan</li>
+          <li>Ashraf</li>
+          <li>Adiya Bhakru</li>
+          <li>Mridul Sharma</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Resource Team</h3>
+        <ul>
+          <li>Hardik Karwal</li>
+          <li >Hari OM</li>
+          <li>Milind</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Poster Team</h3>
+        <ul>
+          <li>Yash Pratap</li>
+          <li>Ria</li>
+          <li>Karthik</li>
+          <li>Jay</li>
+          <li>Moksh Ajmera</li>
+          <li>Kshitij</li>
+          <li>Kivika</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
